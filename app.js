@@ -1,9 +1,7 @@
-const readLine = require("readline").createInterface({
-	input: process.stdin,
-	output: process.stdout,
-});
+const Person = require("./person");
 
-readLine.question(`What's your name? `, (name) => {
-	console.log(`Hello ${name}!!!`);
-	readLine.close();
-});
+// console.log(person);
+// console.log(`Hello ${person.name}!!!`);
+
+const p1 = new Person("Bob");
+p1.greeting();
