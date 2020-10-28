@@ -1,9 +1,9 @@
-const test = () => console.trace("Hello World!!!");
+const readLine = require("readline").createInterface({
+	input: process.stdin,
+	output: process.stdout,
+});
 
-const calcTime = () => {
-	console.time("time");
-	for (let i = 0; i < 10000000; i++) {}
-	test();
-	console.timeEnd("time");
-};
-calcTime();
+readLine.question(`What's your name? `, (name) => {
+	console.log(`Hello ${name}!!!`);
+	readLine.close();
+});
