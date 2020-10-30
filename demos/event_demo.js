@@ -1,10 +1,10 @@
-const events = require("events");
+const EventEmitter = require("events");
 
 // create class
-class emitter extends events {}
+class eventEmitter extends EventEmitter {}
 
 // init
-const myEmitter = new emitter();
+const myEmitter = new eventEmitter();
 
 // listener
 myEmitter.on("event", () => console.log("event running!!!"));
