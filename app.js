@@ -1,8 +1,8 @@
-const Logger = require("./logger");
-const logger = new Logger();
+const http = require("http");
+const port = 3000;
 
-logger.on("message", (msg) => console.log("called listner : ", msg));
-
-logger.log("Hello World!!!");
-logger.log("Hello ");
-logger.log("do stuff");
+// create server
+http.createServer((req, res) => {
+	res.write("Hello World!!");
+	res.end();
+}).listen(port, () => console.log(`App listening at http://localhost:${port}`));

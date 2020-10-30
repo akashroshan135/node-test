@@ -9,4 +9,12 @@ class logger extends events {
 	}
 }
 
-module.exports = logger;
+const loggerObj = new logger();
+
+loggerObj.on("message", (msg) => console.log("called listner : ", msg));
+
+loggerObj.log("Hello World!!!");
+loggerObj.log("Hello ");
+loggerObj.log("do stuff");
+
+//module.exports = logger;
